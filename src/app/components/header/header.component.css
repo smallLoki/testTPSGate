@@ -1,0 +1,21 @@
+header {
+  width: 100%;
+  height: 70px;
+  background: lightblue;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  padding: 0 24px;
+}
+
+img {
+  height: 100%;
+  width: 200px;
+}
+
+.login {
+  height: 100%;
+  padding: 24px;
+}

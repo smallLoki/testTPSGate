@@ -1,0 +1,42 @@
+<main>
+
+
+  <form  [formGroup]="formSignIn" (ngSubmit)="submitLogin()">
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input
+        matInput
+        placeholder="pat@example.com"
+        formControlName="email"
+        (blur)="updateErrorMessage()"
+        required
+      />
+      @if (formSignIn.controls['email'].invalid) {
+        <mat-error>{{errorMessage()}}</mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Пароль</mat-label>
+      <input
+        matInput
+        formControlName="password"
+        [type]="hide() ? 'password' : 'text'"
+        required
+      />
+      <button
+        mat-icon-button
+        matSuffix
+        (click)="clickEvent($event)"
+        [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide()"
+      >
+        <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+    <div class="btn-block">
+      <button mat-flat-button [disabled]="formSignIn.invalid">Войти</button>
+    </div>
+  </form>
+
+
+</main>

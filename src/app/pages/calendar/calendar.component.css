@@ -1,0 +1,36 @@
+main {
+  justify-content: center;
+}
+
+.calendar-list {
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.day-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  gap: 8px;
+  background: aliceblue;
+  border-radius: 8px;
+}
+
+.day-cell {
+  width: 72px;
+}
+
+.time-cell {
+  width: 50%;
+}
+
+.btn-block {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
+
+

@@ -1,0 +1,32 @@
+<main>
+  <div class="calendar-list">
+    @for (item of list; track item) {
+      <div class="day-row">
+        <div class="day-cell">
+          {{ item.day }}
+        </div>
+        <div class="time-cell">
+          <mat-form-field>
+            <mat-label>Начало</mat-label>
+            <input type="text" matInput [(ngModel)]="item.startTime" [matTimepicker]="timepicker" />
+            <mat-timepicker-toggle matSuffix [for]="timepicker"></mat-timepicker-toggle>
+            <mat-timepicker #timepicker format="24h" ></mat-timepicker>
+          </mat-form-field>
+        </div>
+        <div class="time-cell">
+          <mat-form-field>
+            <mat-label>Окончание</mat-label>
+            <input type="text" matInput [(ngModel)]="item.endTime" [matTimepicker]="timepickerEnd" />
+            <mat-timepicker-toggle matSuffix [for]="timepickerEnd"></mat-timepicker-toggle>
+            <mat-timepicker #timepickerEnd format="24h" ></mat-timepicker>
+          </mat-form-field>
+        </div>
+        <div class="">
+          <button mat-flat-button (click)="changeCalendarRow(item)"> Обновить </button>
+        </div>
+      </div>
+    }
+  </div>
+
+
+</main>

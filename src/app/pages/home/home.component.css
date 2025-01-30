@@ -1,0 +1,29 @@
+main {
+  justify-content: center;
+}
+
+.calendar-list {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.day-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  gap: 8px;
+  background: aliceblue;
+  border-radius: 8px;
+}
+
+.day-cell {
+  width: 72px;
+}
+
+.time-cell {
+  text-align: center;
+  width: 80%;
+}

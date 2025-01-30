@@ -1,0 +1,16 @@
+<main>
+  <div class="calendar-list">
+    @for (item of list; track item) {
+      <div class="day-row">
+        <div class="day-cell">
+          {{ item.day }}
+        </div>
+        <div class="time-cell">
+          {{item.startTime}} - {{item.endTime}}
+        </div>
+      </div>
+    }
+  </div>
+
+
+</main>

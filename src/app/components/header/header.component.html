@@ -1,0 +1,10 @@
+<header>
+  <a routerLink="" class="logo">
+    <img src="logo.svg">
+  </a>
+  @if (authService.getAuthStatus()) {
+    <a routerLink="" class="login" (click)="exit()">Выйти</a>
+  } @else {
+    <a routerLink="login" class="login">Войти</a>
+  }
+</header>
