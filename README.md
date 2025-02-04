@@ -57,3 +57,25 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+
+
+
+
+
+
+# API
+
+To run, open the API folder in another window and run the command `npm i`.
+
+The file `testTSPGate_db.sql` is a database file, it contains commands for creating a database and tables with initial content. The project uses the MySQL database.
+
+To change the database connection data, go to the file `src/config/db.config.ts`.
+
+To run, run the command:
+
+```bash
+ng dev
+```
+
+Once the server is running, open your browser and navigate to `http://localhost:3000/`. The application will automatically reload whenever you modify any of the source files.
